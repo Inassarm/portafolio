@@ -1,3 +1,8 @@
 {
-  "CurrentProjectSetting": null
+  "CurrentProjectSetting": null,
+  
+  "command-runner.commands": {
+    "Switch to English": "Configure Language | en",
+    "Switch to Spanish": "Configure Language | es"
+  }
 }

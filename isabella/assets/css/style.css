@@ -17,11 +17,64 @@ body {
     
         font-family: 'Lato', sans-serif;
 }
-
+.color-white{
+    color: white;
+}
+.color-blue{
+    color: blue;
+}
 h1,h2,h3,h4,h5,h6 {
     color: #93afee;
     font-weight: 700;
 }
+.timeline {
+    position: relative;
+    padding-left: 30px;
+    margin-left: 30px;
+}
+
+.timeline-item {
+    position: relative;
+    margin-bottom: 30px;
+    display: flex;
+    align-items: center;
+}
+
+.timeline-marker {
+    width: 12px;
+    height: 12px;
+    background-color: #007bff;
+    border-radius: 50%;
+    position: absolute;
+    left: -6px;
+    top: 0;
+    border: 2px solid #fff;
+    box-shadow: 0 0 0 4px rgba(0, 123, 255, 0.5);
+}
+
+.timeline-content {
+    padding-left: 20px;
+    border-left: 2px solid #007bff;
+    width: 100%;
+}
+
+.timeline-year {
+    font-size: 1rem;
+    font-weight: bold;
+    color: #007bff;
+    margin-bottom: 5px;
+}
+
+.timeline-content h4 {
+    font-size: 1.2rem;
+    color: #007bff;
+}
+
+.timeline-content p {
+    font-size: 1rem;
+    color: #6c757d;
+}
+
 
 a {
     text-decoration: none;
@@ -192,7 +245,126 @@ img {
     display: inline-flex;
     align-items: center;
     justify-content: center;
-    background-color: var(--color-base);
+    background-color: #888888;
     border-radius: 100px;
     font-size: 24px;
+}
+
+.language-btn {
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  .language-btn:hover {
+    background-color: #0056b3;
+  }
+  .container {
+    justify-content: center;
+    align-items: center;
+    align-items: center;
+    
+  }
+
+  /* Botón circular con efecto de sombra y transición */
+#scrollTopBtn {
+    display: none;
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 99;
+    width: 50px;
+    height: 50px;
+    border: none;
+    outline: none;
+    background-color: #3498db; /* Color de fondo */
+    color: white;
+    border-radius: 50%; /* Hace el botón circular */
+    cursor: pointer;
+    font-size: 24px;
+    text-align: center;
+    line-height: 50px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2); /* Sombra */
+    transition: all 0.3s ease; /* Suaviza la transición */
+  }
+  
+  #scrollTopBtn:hover {
+    background-color: #2980b9; /* Color al hacer hover */
+    box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.3); /* Efecto de sombra al hacer hover */
+    transform: translateY(-4px); /* Eleva el botón un poco */
+  }
+  
+  #scrollTopBtn:active {
+    transform: translateY(2px); /* Movimiento hacia abajo al presionar */
+  }
+  
+  .en{
+    color: #333;
+  }
+
+  .es{
+    color: #00a1ff;
+  }
+
+  .check{
+    position:relative;
+    width: 50px;
+  }
+
+  .check:before{
+    content: '';
+    position:absolute;
+    width: 50px;
+    height: 25px;
+    background: #333;
+    border-radius: 25px;
+
+  }
+
+  .check:after{
+    content: '';
+    position:absolute;
+    width: 25px;
+    height: 25px;
+    background: #fff;
+    border-radius: 25px;
+    transition: 0.25s;
+    border: 2px solid;
+  }
+
+  .check:checked:after{
+    left: 25px;
+    border: 2px solid #00a1ff;
+  }
+
+  .check:checked:before{
+    background: #00a1ff;
+  }
+
+  .button-container {
+    display: flex;
+    gap: 10px; /* Espacio entre los botones */
+}
+
+button {
+    background-color: #4CAF50; /* Color de fondo verde */
+    color: white; /* Color del texto blanco */
+    border: none; /* Sin borde */
+    border-radius: 5px; /* Bordes redondeados */
+    padding: 10px 20px; /* Espaciado interno */
+    font-size: 16px; /* Tamaño de fuente */
+    cursor: pointer; /* Cambia el cursor a mano al pasar por encima */
+    transition: background-color 0.3s; /* Transición suave para el color de fondo */
+}
+
+button:hover {
+    background-color: #45a049; /* Color de fondo al pasar el mouse */
+}
+
+button:focus {
+    outline: none; /* Elimina el contorno en el foco */
 }
