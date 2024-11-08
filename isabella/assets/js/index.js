@@ -26,18 +26,25 @@
                 document.getElementById('resultMessage').innerText = 'Error al enviar el mensaje.';
                 document.getElementById('resultMessage').style.display = 'block';
             });
-    });
-    var check=document.querySelector(".check");
-    check.addEventListener('click', idioma);
-
-    function idioma() {
-        let id = check.checked;
-        console.log("Checkbox checked:", id); // Agregar esto para depurar
-    
-        if (id) {
-            window.location.href = "./indexEN.html";  
-        } else {
-            window.location.href = "./index.html";  
         }
-    }
-  
+    )
+        // 2. Función para cambiar el idioma dependiendo del checkbox
+        var check = document.querySelector(".check");
+        
+        if (check) {
+            check.addEventListener('click', idioma);  // Asegúrate de que el checkbox existe
+        }
+        
+        function idioma() {
+            let id = check.checked;
+            console.log("Checkbox checked:", id); // Para depuración
+        
+            if (id) {
+                // Redirige al index en inglés si el checkbox está marcado
+                window.location.href = "./indexEN.html";  
+            } else {
+                // Redirige al index en español si el checkbox no está marcado
+                window.location.href = "./index.html";  
+            }
+        }
+    
