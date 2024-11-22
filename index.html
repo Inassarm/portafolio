@@ -12,7 +12,13 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/line-awesome/1.3.0/line-awesome/css/line-awesome.min.css">
     <link rel="stylesheet" href="./isabella/assets/css/style.css"> <!-- Ruta local --><
     <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap" rel="stylesheet">
-    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bodymovin/5.7.6/bodymovin.min.js"></script>
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+   
+
 </head>
 
 
@@ -23,8 +29,7 @@
     <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
         <div class="container flex-lg-column">
             <a class="navbar-brand mx-lg-auto mb-lg-4" href="#">
-                <span class="h3 fw-bold d-block d-lg-none">Isabella Nassar</span>
-                <img src="./assets/images/person.jpg" class="d-none d-lg-block rounded-circle" alt="">
+                <img src="./logo-isa.png" class="rounded-circles" style="width: 60px; height: 60px; border: 3px;">
             </a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
                 aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
@@ -59,30 +64,50 @@
     <!-- //NAVBAR -->
 
 
-    <!-- CONTENT WRAPPER -->
-    <div id="content-wrapper">
+    <!-- CONTENT  -->
+    <div class="button-container">
+        <button id="btnEspañol" class="btn-secondary color-white">Español</button>
+        <button id="btnInglés" class="btn-secondary color-white">Inglés</button>
+    </div>
+    <!-- Script -->
+    <script>
+        // Manejadores de eventos para los botones
+        document.getElementById('btnEspañol').addEventListener('click', function() {
+            window.location.href = "./index.html";  // Cambia a la página en español
+        });
 
+        document.getElementById('btnInglés').addEventListener('click', function() {
+            window.location.href = "./indexEN.html";  // Cambia a la página en inglés
+        });
+    </script>
+    
         <!-- HOME -->
         <section id="inicio" class="full-height px-lg-5">
-
             <div class="container">
                 <div class="row">
-                    <div class="col-lg-10">
-                        <h1 class="display-4 fw-bold text-brand" data-aos="fade-up">Hola, soy Isabella Nassar</h1>
+                    <!-- Columna de texto -->
+                    <div class="col-lg-6">
+                        <h1 class="display-4 fw-bold text-brand" data-aos="fade-up">Hola, </h1>
+                        <h1 class="display-4 fw-bold text-brand" data-aos="fade-up">Soy Isabella Nassar</h1>
                         <h2 class="text-brand size">Ingeniera de Software</h2>
-                        <p class="lead mt-2 mb-4 color-white">¡Bienvenid@ a mi portafolio web!
-
-                        En este espacio podrás conocer más sobre mis proyectos y las tecnologías con las que me apasiona crear soluciones innovadoras. A continuación, encontrarás mi currículum disponible en español e inglés. </p>
-            
+                        <p class="lead mt-2 mb-4 color-white">¡Bienvenid@ a mi portafolio web!<br><br> En este espacio podrás conocer más sobre mis proyectos y las tecnologías con las que me apasiona crear soluciones innovadoras. A continuación, encontrarás mi currículum disponible en español e inglés.</p>
+                        
                         <div data-aos="fade-up" data-aos-delay="600">
-                            <a href="/prueba/downloads/CurriculumES.pdf" download class="btn btn-secondary me-3">Descargar Currículum (Español)</a>
-                            <a href="/prueba/downloads/CurriculumEN.pdf" download class="btn btn-secondary">Download Resume (English)</a>
+                            <a href="https://drive.google.com/file/d/1dqZqB6HawOgKL7vvLZhODcMacW7gI3DW/view?usp=sharing" target="_blank" class="btn btn-secondary me-3">Descargar Currículum (Español)</a>
+                            <a href="/prueba/downloads/CurriculumESP.pdf" download class="btn btn-secondary">Download Resume (English)</a>
+                        </div>
+                    </div>
+        
+                    <!-- Columna de animación Lottie -->
+                    <div class="col-lg-6 d-flex align-items-center justify-content-center">
+                        <div class="lottie-container" data-aos="fade-up" data-aos-delay="800">
+                            <iframe src="https://lottie.host/embed/01e502f6-b9ea-471a-8ac7-6b2a0a9c4a79/Y3Kuw6VTLM.json" width="450" height="250" style="border: none;"></iframe>
                         </div>
                     </div>
                 </div>
             </div>
-
         </section>
+        
         <!-- //HOME -->
         <section id="about" class="full-height px-lg-5">
             <div class="container">
@@ -96,7 +121,7 @@
                 </div>
         
                 <div class="row gy-4">
-                    <!-- Cuadro de Mi Perfil -->
+                    <!-- Mi Perfil -->
                     <div class="col-md-6" data-aos="fade-up">
                         <div class="card-custom rounded-4 bg-base shadow-effect">
                             <div class="card-custom-content p-4">
@@ -106,7 +131,7 @@
                         </div>
                     </div>
         
-                    <!-- Cuadro de Mis Valores -->
+                    <!-- Mis Valores -->
                     <div class="col-md-6" data-aos="fade-up" data-aos-delay="300">
                         <div class="card-custom rounded-4 bg-base shadow-effect">
                             <div class="card-custom-content p-4">
@@ -192,49 +217,52 @@
         
 
         <!-- EDUCATION -->
-        <section id="educacion" class="full-height px-lg-5">
-            <div class="container">
+<section id="educacion" class="full-height px-lg-5">
+    <div class="container">
 
-                <div class="row pb-4" data-aos="fade-up">
-                    <div class="col-lg-8">
-                        <h6 class="text-brand">EDUCACIÓN</h6>
-                        <h1>Trayectoria Académica</h1>
+        <div class="row pb-4" data-aos="fade-up">
+            <div class="col-lg-8">
+                <h6 class="text-brand">EDUCACIÓN</h6>
+                <h1>Trayectoria Académica</h1>
+            </div>
+        </div>
+
+        <div class="row gy-5">
+            <!-- Columna de texto y timeline -->
+            <div class="col-lg-6">
+                <p class="mb-4 color-white" data-aos="fade-up" data-aos-delay="300">A continuación, presento mi trayectoria académica que he realizado hasta la fecha.</p>
+                <div class="timeline">
+                    <!-- Timeline item: Técnico en Desarrollo de Software -->
+                    <div class="timeline-item" data-aos="fade-up" data-aos-delay="600">
+                        <div class="timeline-marker"></div>
+                        <div class="timeline-content">
+                            <span class="timeline-year">2023 - 2024</span>
+                            <h4 class="color-white">Técnico en Desarrollo de Software</h4>
+                            <p class="text-brand mb-2">Universidad CENFOTEC</p>
+                        </div>
                     </div>
-                </div>
 
-                <div class="row gy-5">
-                    <div class="col-lg-6">
-                        <P class="mb-4 color-white" data-aos="fade-up" data-aos-delay="300">A continuación, presento mi trayectoria académica que he realizado hasta la fecha.</P>
-                        <div class="timeline">
-                            <!-- Timeline item: Técnico en Desarrollo de Software -->
-                            <div class="timeline-item" data-aos="fade-up" data-aos-delay="600">
-                                <div class="timeline-marker"></div>
-                                <div class="timeline-content">
-                                    <span class="timeline-year">2023 - 2024</span>
-                                    <h4 class="color-white">Técnico en Desarrollo de Software</h4>
-                                    <p class="text-brand mb-2">Universidad CENFOTEC</p>
-                                </div>
-                            </div>
-                
-                            <!-- Timeline item: Bachillerato en Ingeniería del Software -->
-                            <div class="timeline-item" data-aos="fade-up" data-aos-delay="600">
-                                <div class="timeline-marker"></div>
-                                <div class="timeline-content">
-                                    <span class="timeline-year">2023 - 2025</span>
-                                    <h4 class="color-white">Bachillerato en Ingeniería del Software</h4>
-                                    <p class="text-brand mb-2">Universidad CENFOTEC</p>
-                                </div>
-                            </div>
-
-
+                    <!-- Timeline item: Bachillerato en Ingeniería del Software -->
+                    <div class="timeline-item" data-aos="fade-up" data-aos-delay="600">
+                        <div class="timeline-marker"></div>
+                        <div class="timeline-content">
+                            <span class="timeline-year">2023 - 2025</span>
+                            <h4 class="color-white">Bachillerato en Ingeniería del Software</h4>
+                            <p class="text-brand mb-2">Universidad CENFOTEC</p>
                         </div>
                     </div>
                 </div>
-                
-                
-
             </div>
-        </section>
+
+            <!-- Columna de animación Lottie -->
+            <div class="col-lg-6 d-flex align-items-center justify-content-center">
+                <iframe src="https://lottie.host/embed/bde46ba9-86e4-47b6-a37b-9d4ed1e4a170/KrXqxIJUL1.json" width="300" height="300" style="border: none;"></iframe>
+            </div>
+
+        </div>
+    </div>
+</section>
+
         <!-- //EDUCATION -->
         <!-- //PROYECTOS-->
         <section id="proyectos" class="full-height px-lg-5">
@@ -288,7 +316,7 @@
                 <div class="row justify-content-center text-center">
                     <div class="col-lg-8 pb-4" data-aos="fade-up">
                         <h6 class="text-brand">CONTACTO</h6>
-                        <h1>Pongámonos en contacto</h1>
+                        <h1>Contacto</h1>
                     </div>
         
                     <div class="col-lg-8" data-aos="fade-up" data-aos-delay="300">
@@ -316,47 +344,29 @@
         </section>
         <!-- //CONTACT -->
         <section id="iframe-section" class="my-5">
-            <h2 class="text-center">Información de contacto</h2>
+            <h2 class="text-center">Información de Contacto</h2>
             
         <!-- FOOTER -->
         <footer class="py-5 px-lg-5">
             <div class="container">
-                <div class="row gy-4 justify-content-between">
+                <div class="row gy-4 center">
                     <div class="col-auto">
-                        <p class="mb-0">Designed by <a href="#" class="fw-bold">SA7MAN</a></p>
+                        <img src="./logo-isa.png" class="rounded-circles" style="width: 60px; height: 60px; border: 3px;">
                     </div>
                     <div class="col-auto">
+                        <p class="mb-0"> <a href="#" class="fw-bold"></a></p>
+                    </div>
+                    <div class="auto">
                         <div class="social-icons">
                             <a href="www.linkedin.com/in/isabella-nassar-míguez-680b30330"><i class="lab la-linkedin"></i></a>
-                            <a href="https://github.com/Inassarm"><i class="lab la-github"></i></a>
+                            <a href="https://github.com/Inassarm"><i class="lab la-github" ></i></a>
                             <a href="https://wa.me/50689698243"> <i class="lab la-whatsapp"></i></a>
                         </div>   
+                    </div>
                 </div>
-                
-            
-                <div class="button-container">
-                    <button id="btnEspañol" class="  btn-secondary color-white ">Español</button>
-                    
-                    <button id="btnInglés" class="  btn-secondary color-white">Inglés</button>
-                </div>
-            
-                <script>
-                    document.getElementById('btnEspañol').addEventListener('click', function() {
-                        window.location.href = "./index.html";  // Cambia a la página en español
-                    });
-            
-                    document.getElementById('btnInglés').addEventListener('click', function() {
-                        window.location.href = "./indexEN.html";  // Cambia a la página en inglés
-                    });
-                </script>
-                
             </div>
         </footer>
     
-
-       
-        
-
         
         <!-- //FOOTER -->
         <button onclick="scrollToTop()" id="scrollTopBtn" title="Ir arriba">↑</button>
@@ -380,7 +390,7 @@
     <script>
         
         (function(){
-            emailjs.init("service_gq19ndi"); 
+            emailjs.init("YblM1Y8k4CKaHIFg0"); 
         })();
     </script>
 </body>
