@@ -75,4 +75,25 @@ document.getElementById('contactForm').addEventListener('submit', function(event
                 window.location.href = "./index.html";  
             }
         }
-    
+        let currentSlide = 0;
+
+function showSlide(index) {
+    const slides = document.querySelectorAll('.carrusel-item');
+    if (index >= slides.length) {
+        currentSlide = 0;
+    } else if (index < 0) {
+        currentSlide = slides.length - 1;
+    } else {
+        currentSlide = index;
+    }
+
+    const carruselContainer = document.querySelector('.carrusel-container');
+    carruselContainer.style.transform = `translateX(${-currentSlide * 100}%)`;
+}
+
+function moveSlide(direction) {
+    showSlide(currentSlide + direction);
+}
+
+// Inicializa el carrusel
+showSlide(currentSlide);
