@@ -194,12 +194,26 @@ p {
     }
 
     .carrusel-item h2 {
-        font-size: 1.5rem; /* Tamaño de la letra */
-        color: #333;       /* Color del texto */
-        margin-bottom: 10px; /* Espaciado inferior */
+        font-size: 14px; 
+    }
+    .carrusel-item p {
+        font-size: 12px; 
+        
+    }
+    
+    .button-container {
+    display: flex;
+    gap: 10px; 
+    flex-wrap: wrap;
+    position: absolute;
+    top: 100px; 
+    right: 10px;
+    z-index: 1000;
+    margin-top:100px;
+    margin-bottom: 60px;
+   
     }
 
-    
 }
 
 
@@ -599,15 +613,26 @@ img {
 
   .button-container {
     display: flex;
-    gap: 10px; /* Espacio entre los botones */
+    gap: 10px; 
     flex-wrap: wrap;
-        position: fixed;
-        top: 10px;
-        right: 10px;
-        display: flex;
-        gap: 10px;
-        z-index: 1000; /* Ensures buttons stay above other elements */
+    position: absolute;
+    top: 10px; 
+    right: 10px;
+    z-index: 1000;
     
+}
+
+.button-container button {
+    padding: 6px 10px;  
+    font-size: 14px;     
+    max-width: 90px;     
+    max-height: 40px;    
+    background-color: #00a1ff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    bottom: 20px;
 }
 
 button {
