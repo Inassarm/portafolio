@@ -31,7 +31,10 @@ body {
     display: flex;
     transition: transform 0.5s ease-in-out;
 }
-
+.logo-and-icons {
+    flex-direction: column; /* Apila los elementos verticalmente en pantallas pequeñas */
+    gap: 10px;
+}
 .carrusel-item {
     min-width: 100%;
     position: relative;
@@ -177,8 +180,6 @@ p {
         margin-bottom: 15px;
     }
 
-     
-    
 
     .btn {
         width: 65%; 
@@ -641,12 +642,13 @@ img {
 }
 
 .button-container button {
+    font-family: 'lato';
     padding: 6px 10px;  
     font-size: 14px;     
     max-width: 90px;     
     max-height: 40px;    
     background-color: #93afee;
-    color: white;
+    color: #002a64;
     border: none;
     border-radius: 5px;
     cursor: pointer;
