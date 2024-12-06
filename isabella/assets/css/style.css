@@ -179,12 +179,22 @@ p {
     .card-custom {
         margin-bottom: 15px;
     }
+    .contenedor-botones {
+        display: grid; 
+        grid-auto-flow: column; /* Coloca los botones en una fila horizontal */
+        gap: 10px; /* Espacio entre los botones */
+    }
+    .info p{
+        font-size: 9px;
+    }
 
 
     .btn {
-        width: 65%; 
+        width: 100%; 
         margin-bottom: 10px; 
         padding: 5px 10px;
+        flex: 1; /* Los botones ocuparán el mismo espacio */
+    text-align: center;
     }
 
     .btn-container {
@@ -195,7 +205,7 @@ p {
    
 
     .btn-container .btn {
-        width: 48%; 
+        width: 100%; 
         margin-bottom: 10px;
     }
 
@@ -261,7 +271,7 @@ margin-bottom: 20px;
     color:white;
 }
 .blue:hover{
-    color:#002a64;
+    color:#93afee;
 }
 .color-white{
     color: white;
@@ -416,6 +426,8 @@ img {
     padding: 5px 18px;
     font-weight: 700;
     margin-bottom:15px;
+    flex: 1; /* Los botones ocuparán el mismo espacio */
+    text-align: center;
 }
 
 .btn-brand {
@@ -648,7 +660,7 @@ img {
     max-width: 90px;     
     max-height: 40px;    
     background-color: #93afee;
-    color: #002a64;
+    color: 002a64;
     border: none;
     border-radius: 5px;
     cursor: pointer;
